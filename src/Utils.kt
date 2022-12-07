@@ -15,6 +15,6 @@ fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteA
     .toString(16)
     .padStart(32, '0')
 
-fun assertThat(result: Int, expected: Int) {
+fun <T> assertThat(result: T, expected: T) {
     check(result == expected) { "Invalid result got '${result}' but expected '${expected}'" }
 }
